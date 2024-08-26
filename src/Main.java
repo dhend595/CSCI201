@@ -16,7 +16,7 @@ public class Main {
         System.out.println("The circumference of the circle is " + circumference(radius));
     }
 
-    public static void main(String[] args) {
+    private static void inputRadius() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the radius of the circle: ");
@@ -24,6 +24,9 @@ public class Main {
         double radius = scanner.nextDouble();
 
         displayResults(radius);
+    }
 
+    public static void main(String[] args) {
+        inputRadius();
     }
 }
