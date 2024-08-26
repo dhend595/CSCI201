@@ -1,6 +1,21 @@
 import java.util.Scanner;
 
 public class Main {
+    private static final double PI = Math.PI;
+
+    private static double area(double radius) {
+        return PI * Math.pow(radius, 2);
+    }
+
+    private static double circumference(double radius) {
+        return 2 * PI * radius;
+    }
+
+    private static void displayResults(double radius) {
+        System.out.println("The area of the circle is " + area(radius));
+        System.out.println("The circumference of the circle is " + circumference(radius));
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -8,11 +23,7 @@ public class Main {
 
         double radius = scanner.nextDouble();
 
-        double area = Math.PI * Math.pow(radius, 2);
-        double circumference = 2 * Math.PI * radius;
-
-        System.out.println("The area of the circle is: " + area);
-        System.out.println("The circumference of the circle is: " + circumference);
+        displayResults(radius);
 
     }
 }
